@@ -52,13 +52,11 @@ Marzo 2026
 
 # 2. Diseño del Sistema
 
-## 2.1 Diagrama de bloques
+## 2.1 Diagrama de circuito
 
-## 2.2 Diagrama de circuito
-
-## 2.3 Diagrama de arquitectura del sistema
-
-## 2.4 Diagramas estructurales y de comportamiento
+## 2.2 Diagrama de arquitectura del sistema
+![Diagrama_de_arquitectura_del_sistema](Imagenes/Diagrama_de_arquitectura.png)
+## 2.3 Diagramas estructurales y de comportamiento
 
 # 3. Implementación
 
