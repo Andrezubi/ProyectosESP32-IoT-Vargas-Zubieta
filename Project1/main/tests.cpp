@@ -1,5 +1,4 @@
-
-#include "LED.h"
+/* #include "LED.h"
 #include "SonarSensor.h"
 SonarSensor sonar(26,27);
 void setup() {
@@ -15,5 +14,5 @@ void loop() {
     Serial.print(" cm");
     Serial.println("");
 
-    delay(500);
-}
+    delay(100);
+} */

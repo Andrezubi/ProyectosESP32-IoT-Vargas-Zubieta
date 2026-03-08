@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-class Led {
+class LED {
 
   public:
     enum State : byte {
@@ -18,7 +18,7 @@ class Led {
     unsigned long previousMillis = 0;
 
   public:
-    Led(byte pin) {
+    LED(byte pin) {
       this->pin=pin;
       pinMode(pin, OUTPUT);
       turnOff();
