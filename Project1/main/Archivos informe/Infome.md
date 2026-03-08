@@ -56,6 +56,8 @@ Marzo 2026
 
 - Se debe determinar que materiales se puede usar con el senson ultra sonido, su precision y su exactitud
 
+- Se debe determinar la distancias maximas y minimas para el funcionamiento preciso y exacto del sensor.
+
 - El sistema debe dejar que el usuario defina la cantidad de veces que parpadea por segundo, y esto debe tener un error menor al 10%
 
 - El código debe estar dividido en funciones o módulos que permitan modificar o ampliar el sistema fácilmente.
@@ -120,7 +122,7 @@ Los resultados obtenidos muestran que el sistema logró medir distancias cercana
 
 ## Prueba de materiales para distancia
 
-Las pruebas realizadas con diferentes materiales a una distancia de 30 cm mostraron que la mayoría de las mediciones se mantuvieron cercanas al valor real. Sin embargo, algunos materiales como la mano y la cerámica presentaron una mayor variación en las mediciones debido a las características de reflexión de las ondas ultrasónicas.
+Las pruebas realizadas con diferentes materiales a una distancia de 30 cm mostraron que la mayoría de las mediciones se mantuvieron cercanas al valor real. Sin embargo, algunos materiales como la mano y la cerámica presentaron una mayor variación en las mediciones debido a las características de reflexión de las ondas ultrasónicas. De igual forma se observo que materiales que absorben sonido como la manta no son detectadas por el sensor.
 
 ## Prueba de distancias mínimas y máximas del sensor
 
@@ -134,23 +136,23 @@ Los promedios obtenidos fueron 10.16, 20.66, 28.16, 37.66 y 45.66 parpadeos para
 
 - Los resultados obtenidos muestran que el sistema logró medir distancias cercanas a los valores reales de 80 cm, 50 cm y 20 cm. Los promedios obtenidos fueron 79.63 cm, 49.52 cm y 20.04 cm respectivamente. Además, los errores de exactitud registrados fueron 0.46%, 0.96% y 0.21%, lo que indica una alta precisión en las mediciones realizadas por el sensor ultrasónico.
 
-- El sensor ultrasónico puede medir distancias correctamente con diferentes tipos de materiales, aunque el tipo de superficie influye en la estabilidad de la medición. Materiales con superficies irregulares o con menor capacidad de reflexión pueden generar ligeras variaciones en los resultados.
+- El sensor ultrasónico puede medir distancias correctamente con diferentes tipos de materiales, aunque el tipo de superficie influye en la estabilidad de la medición. Materiales con superficies irregulares o con menor capacidad de reflexión pueden generar ligeras variaciones en los resultados y podemos obsevar que directamente no funciona con ciertos materiales como telas y mantas.
 
-- El sensor ultrasónico tiene un rango de funcionamiento efectivo limitado. Dentro de ese rango el sistema mantiene mediciones relativamente precisas, pero al superar los límites de operación la detección del objeto se vuelve inestable o inexistente. 
+- El sensor ultrasónico tiene un rango de funcionamiento efectivo limitado. Dentro de ese rango el sistema mantiene mediciones relativamente precisas, pero al superar los límites de operación la detección del objeto se vuelve inestable o inexistente. Vemos que su rango de funcionamiente esta alrededor de 3cm a 290 cm. Esto tambien puede ser dado debido a como hemos configurado el sensor, ya que hemos limitado el tiempo maximo de espera para recibir la señal de 30 milisegundos. Esto puede significar que a ciertas distancias no funcione por esto
 
-- Los promedios obtenidos fueron 10.16, 20.66, 28.16, 37.66 y 45.66 parpadeos para las frecuencias configuradas de 1 a 5 b/s respectivamente. Al convertir estos valores a parpadeos por segundo se obtuvieron frecuencias aproximadas de 1.01, 2.06, 2.81, 3.76 y 4.56 b/s. Los errores de exactitud registrados se encuentran entre 1.67% y 8.67% en comparación con los valores esperados.  
+- Los promedios obtenidos fueron 10.16, 20.66, 28.16, 37.66 y 45.66 parpadeos para las frecuencias configuradas de 1 a 5 b/s(parpadeos por segundo) respectivamente. Al convertir estos valores a parpadeos por segundo se obtuvieron frecuencias aproximadas de 1.01, 2.06, 2.81, 3.76 y 4.56 b/s. Los errores de exactitud registrados se encuentran entre 1.67% y 8.67% en comparación con los valores esperados.  
 
-- Los resultados muestran que el sistema es capaz de generar frecuencias de parpadeo cercanas a las configuradas. Sin embargo, a medida que aumenta la frecuencia se observa una mayor diferencia respecto al valor esperado, lo cual puede deberse a pequeñas variaciones en el temporizador o a errores en el conteo manual de los parpadeos.
+- Los resultados muestran que el sistema es capaz de generar frecuencias de parpadeo cercanas a las configuradas. Sin embargo, a medida que aumenta la frecuencia se observa una mayor diferencia respecto al valor esperado, lo cual puede deberse a pequeñas variaciones en el temporizador, errores de sincronismo en el codigo (uso de delay) o a errores en el conteo manual de los parpadeos.
+
+- Vemos que si se cumple los requrimientos de precision y exactitud necesarias. Tambien podemos observar que el sistema si mantiene el rango de error definido para las veces que parpadeara en un segundo pero a mayor frecuencia mas error hay. Se podria mejorar el codigo sin el uso de delays pero no dejaria que la placa descanse y esta tenderia a sobrecalentarse.
 
 # 7. Recomendaciones 
 
-- Se recomienda mantener el sensor en una posición estable y evitar superficies inclinadas o irregulares durante la medición. También es recomendable realizar varias mediciones y utilizar promedios para reducir posibles variaciones en los resultados.
+- Se recomienda mantener el sensor en una posición estable y evitar superficies inclinadas o irregulares durante la medición. También es recomendable realizar varias mediciones y utilizar promedios para reducir posibles variaciones en los resultados y utilizar materiales que no absorban sonido. 
 
-- Se recomienda utilizar superficies relativamente planas para obtener mediciones más estables. También es útil considerar el tipo de material del objeto cuando se utilicen sensores ultrasónicos en aplicaciones prácticas. 
+- Se recomienda utilizar el sensor dentro de su rango óptimo de funcionamiento (3 cm a 290 cm) para obtener mediciones más confiables. También es conveniente considerar estos límites al diseñar sistemas que dependan de la detección de distancia mediante sensores ultrasónicos. 
 
-- Se recomienda utilizar el sensor dentro de su rango óptimo de funcionamiento para obtener mediciones más confiables. También es conveniente considerar estos límites al diseñar sistemas que dependan de la detección de distancia mediante sensores ultrasónicos. 
-
-- Se recomienda utilizar métodos automáticos para contar los parpadeos y así reducir errores humanos en la medición. También se puede mejorar la precisión ajustando los tiempos del programa o utilizando temporizadores más exactos dentro del sistema. 
+- Se recomienda utilizar métodos automáticos para contar los parpadeos y así reducir errores humanos en la medición. También se puede mejorar la precisión ajustando los tiempos del programa o utilizando temporizadores más exactos dentro del sistema. y tambien se podria aumentar algun tipo de compensacion a frecuencias mas altas.
 
 # 8. Anexos 
 
