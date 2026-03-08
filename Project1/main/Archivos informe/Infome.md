@@ -114,6 +114,12 @@ Durante las pruebas realizadas en los rangos de distancia máxima y mínima se o
 
 - El sensor ultrasónico tiene un rango de funcionamiento efectivo limitado. Dentro de ese rango el sistema mantiene mediciones relativamente precisas, pero al superar los límites de operación la detección del objeto se vuelve inestable o inexistente. 
 
-# 7. Recomendaciones
+# 7. Recomendaciones 
+
+- Se recomienda mantener el sensor en una posición estable y evitar superficies inclinadas o irregulares durante la medición. También es recomendable realizar varias mediciones y utilizar promedios para reducir posibles variaciones en los resultados.
+
+- Se recomienda utilizar superficies relativamente planas para obtener mediciones más estables. También es útil considerar el tipo de material del objeto cuando se utilicen sensores ultrasónicos en aplicaciones prácticas. 
+
+- Se recomienda utilizar el sensor dentro de su rango óptimo de funcionamiento para obtener mediciones más confiables. También es conveniente considerar estos límites al diseñar sistemas que dependan de la detección de distancia mediante sensores ultrasónicos.
 
 # 8. Anexos
