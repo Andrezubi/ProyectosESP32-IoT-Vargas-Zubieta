@@ -66,6 +66,8 @@ Marzo 2026
 
 ## 3.1 Código fuente documentado
 
+[Enlace a GitHub] https://github.com/Andrezubi/ProyectosESP32-IoT-Vargas-Zubieta/tree/Informe-Primer-Proyecto 
+
 # 4. Pruebas y Validaciones
 ## Prueba de exactitud de distancia
 
@@ -92,6 +94,12 @@ Para evaluar el rango de funcionamiento del sensor ultrasónico se realizaron me
 Los datos utilizados en esta prueba se encuentran en la hoja:
 
 [prueba de distancias minimas y maximas sensor](https://docs.google.com/spreadsheets/d/1DyKpLJWUTkjiDA7z87IJXlJ0ULdZPX75TzI_sI9DBeM/edit?gid=2038861534#gid=2038861534)
+ 
+## Prueba parpadeo por segundo
+
+Se realizaron pruebas para verificar la frecuencia de parpadeo de un LED configurado a diferentes valores entre 1 y 5 parpadeos por segundo (b/s). Para cada configuración se contó manualmente el número de parpadeos durante 10 segundos. El procedimiento se repitió 6 veces por cada frecuencia con el fin de obtener resultados más confiables y calcular un promedio de los valores registrados.
+
+[Prueba parpadeo por segundo](https://docs.google.com/spreadsheets/d/1DyKpLJWUTkjiDA7z87IJXlJ0ULdZPX75TzI_sI9DBeM/edit?gid=241907707#gid=241907707)
 
 # 5. Resultados 
 ## Prueba de exactitud de distancia
@@ -106,6 +114,10 @@ Las pruebas realizadas con diferentes materiales a una distancia de 30 cm mostra
 
 Durante las pruebas realizadas en los rangos de distancia máxima y mínima se observó que el sensor puede medir correctamente distancias cercanas a 270 cm, 280 cm y 290 cm, con errores de exactitud bajos. Sin embargo, al acercarse a los límites extremos del sensor, especialmente en distancias muy pequeñas o superiores a 300 cm, el sensor presenta dificultades para detectar el objeto o aumenta el error de medición.
 
+## Prueba parpadeo por segundo
+
+Los promedios obtenidos fueron 10.16, 20.66, 28.16, 37.66 y 45.66 parpadeos para las frecuencias configuradas de 1 a 5 b/s respectivamente. Al convertir estos valores a parpadeos por segundo se obtuvieron frecuencias aproximadas de 1.01, 2.06, 2.81, 3.76 y 4.56 b/s. Los errores de exactitud registrados se encuentran entre 1.67% y 8.67% en comparación con los valores esperados.
+
 # 6. Conclusiones
 
 - Los resultados obtenidos muestran que el sistema logró medir distancias cercanas a los valores reales de 80 cm, 50 cm y 20 cm. Los promedios obtenidos fueron 79.63 cm, 49.52 cm y 20.04 cm respectivamente. Además, los errores de exactitud registrados fueron 0.46%, 0.96% y 0.21%, lo que indica una alta precisión en las mediciones realizadas por el sensor ultrasónico.
@@ -114,12 +126,18 @@ Durante las pruebas realizadas en los rangos de distancia máxima y mínima se o
 
 - El sensor ultrasónico tiene un rango de funcionamiento efectivo limitado. Dentro de ese rango el sistema mantiene mediciones relativamente precisas, pero al superar los límites de operación la detección del objeto se vuelve inestable o inexistente. 
 
+- Los promedios obtenidos fueron 10.16, 20.66, 28.16, 37.66 y 45.66 parpadeos para las frecuencias configuradas de 1 a 5 b/s respectivamente. Al convertir estos valores a parpadeos por segundo se obtuvieron frecuencias aproximadas de 1.01, 2.06, 2.81, 3.76 y 4.56 b/s. Los errores de exactitud registrados se encuentran entre 1.67% y 8.67% en comparación con los valores esperados.  
+
+- Los resultados muestran que el sistema es capaz de generar frecuencias de parpadeo cercanas a las configuradas. Sin embargo, a medida que aumenta la frecuencia se observa una mayor diferencia respecto al valor esperado, lo cual puede deberse a pequeñas variaciones en el temporizador o a errores en el conteo manual de los parpadeos.
+
 # 7. Recomendaciones 
 
 - Se recomienda mantener el sensor en una posición estable y evitar superficies inclinadas o irregulares durante la medición. También es recomendable realizar varias mediciones y utilizar promedios para reducir posibles variaciones en los resultados.
 
 - Se recomienda utilizar superficies relativamente planas para obtener mediciones más estables. También es útil considerar el tipo de material del objeto cuando se utilicen sensores ultrasónicos en aplicaciones prácticas. 
 
-- Se recomienda utilizar el sensor dentro de su rango óptimo de funcionamiento para obtener mediciones más confiables. También es conveniente considerar estos límites al diseñar sistemas que dependan de la detección de distancia mediante sensores ultrasónicos.
+- Se recomienda utilizar el sensor dentro de su rango óptimo de funcionamiento para obtener mediciones más confiables. También es conveniente considerar estos límites al diseñar sistemas que dependan de la detección de distancia mediante sensores ultrasónicos. 
+
+- Se recomienda utilizar métodos automáticos para contar los parpadeos y así reducir errores humanos en la medición. También se puede mejorar la precisión ajustando los tiempos del programa o utilizando temporizadores más exactos dentro del sistema. 
 
 # 8. Anexos
