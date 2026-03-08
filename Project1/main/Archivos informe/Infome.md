@@ -34,11 +34,17 @@ Marzo 2026
   - Distancia entre 40 cm y 80 cm  
   - Distancia mayor o igual a 80 cm
 
-- El sistema debe activar un LED rojo en modo parpadeo cuando la distancia detectada sea menor a 40 cm.
+- El sistema debe encender un LED azul en modo parpadeo cuando la distancia detectada sea mayor a 80 cm.
 
-- El sistema debe activar un LED amarillo o naranja en modo parpadeo lento cuando la distancia detectada esté entre 40 cm y 80 cm.
+- El sistema debe activar un LED rojo en modo parpadeo cuando la distancia detectada este entre 80 y 50 cm.
 
-- El sistema debe encender un LED verde de forma constante cuando la distancia detectada sea mayor o igual a 80 cm. 
+- El sistema debe activar un LED amarillo en modo parpadeo lento cuando la distancia detectada esté entre 50 cm y 20 cm.
+
+- El sistema debe encender un LED verde de forma constante cuando la distancia detectada sea menor a 20 cm. 
+
+- El sistema debe apagar todos los LEDS cuando el sensor no detecte un objeto.
+
+
 
 ## Requerimientos No Funcionales
 
