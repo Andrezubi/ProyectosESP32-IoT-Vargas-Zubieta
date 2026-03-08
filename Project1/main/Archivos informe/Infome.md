@@ -91,7 +91,7 @@ Para evaluar el rango de funcionamiento del sensor ultrasónico se realizaron me
 
 Los datos utilizados en esta prueba se encuentran en la hoja:
 
-[prueba de distancias minimas y maximas sensor](}https://docs.google.com/spreadsheets/d/1DyKpLJWUTkjiDA7z87IJXlJ0ULdZPX75TzI_sI9DBeM/edit?gid=2038861534#gid=2038861534)
+[prueba de distancias minimas y maximas sensor](https://docs.google.com/spreadsheets/d/1DyKpLJWUTkjiDA7z87IJXlJ0ULdZPX75TzI_sI9DBeM/edit?gid=2038861534#gid=2038861534)
 
 # 5. Resultados 
 ## Prueba de exactitud de distancia
@@ -107,6 +107,12 @@ Las pruebas realizadas con diferentes materiales a una distancia de 30 cm mostra
 Durante las pruebas realizadas en los rangos de distancia máxima y mínima se observó que el sensor puede medir correctamente distancias cercanas a 270 cm, 280 cm y 290 cm, con errores de exactitud bajos. Sin embargo, al acercarse a los límites extremos del sensor, especialmente en distancias muy pequeñas o superiores a 300 cm, el sensor presenta dificultades para detectar el objeto o aumenta el error de medición.
 
 # 6. Conclusiones
+
+- Los resultados obtenidos muestran que el sistema logró medir distancias cercanas a los valores reales de 80 cm, 50 cm y 20 cm. Los promedios obtenidos fueron 79.63 cm, 49.52 cm y 20.04 cm respectivamente. Además, los errores de exactitud registrados fueron 0.46%, 0.96% y 0.21%, lo que indica una alta precisión en las mediciones realizadas por el sensor ultrasónico.
+
+- El sensor ultrasónico puede medir distancias correctamente con diferentes tipos de materiales, aunque el tipo de superficie influye en la estabilidad de la medición. Materiales con superficies irregulares o con menor capacidad de reflexión pueden generar ligeras variaciones en los resultados.
+
+- El sensor ultrasónico tiene un rango de funcionamiento efectivo limitado. Dentro de ese rango el sistema mantiene mediciones relativamente precisas, pero al superar los límites de operación la detección del objeto se vuelve inestable o inexistente. 
 
 # 7. Recomendaciones
 
