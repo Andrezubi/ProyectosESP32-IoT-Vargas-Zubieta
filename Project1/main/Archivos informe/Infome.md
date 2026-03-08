@@ -50,7 +50,13 @@ Marzo 2026
 
 - El sistema debe reaccionar a cambios en la distancia en un tiempo menor a 1 segundo.
 
-- El sistema debe medir la distancia con un margen de error respecto a la distancia real.
+- El sistema debe medir la distancia con un margen de error menor al 2.5% respecto a la distancia real.
+
+- El sistema debe tener un margen de error de precision menor al 2.5%.
+
+- Se debe determinar que materiales se puede usar con el senson ultra sonido, su precision y su exactitud
+
+- El sistema debe dejar que el usuario defina la cantidad de veces que parpadea por segundo, y esto debe tener un error menor al 10%
 
 - El código debe estar dividido en funciones o módulos que permitan modificar o ampliar el sistema fácilmente.
 
@@ -65,19 +71,19 @@ Marzo 2026
 ## 2.3 Diagramas estructurales y de comportamiento
 ### 2.3.1 Diagrama de secuencia
 ![Diagrama](Imagenes/diagrama_secuencia.jpeg)
-### 2.3.1 Diagramas de uml
+### 2.3.1 Diagramas uml de clases
 ![Diagrama](Imagenes/diagrama_uml.jpeg)
 
 # 3. Implementación
 
 ## 3.1 Código fuente documentado
 
-[Enlace a GitHub] https://github.com/Andrezubi/ProyectosESP32-IoT-Vargas-Zubieta/tree/Informe-Primer-Proyecto 
+[Enlace a GitHub] https://github.com/Andrezubi/ProyectosESP32-IoT-Vargas-Zubieta/tree/main/Project1/main
 
 # 4. Pruebas y Validaciones
 ## Prueba de exactitud de distancia
 
-Para evaluar la exactitud del sistema se realizaron 20 mediciones a tres distancias de referencia: 80 cm, 50 cm y 20 cm utilizando el sensor ultrasónico. Con los datos obtenidos se calcularon el promedio, la desviación estándar y el porcentaje de error, con el objetivo de comparar las mediciones del sistema con las distancias reales.
+Para evaluar la exactitud del sistema se realizaron 20 mediciones a tres distancias de referencia: 80 cm, 50 cm y 20 cm utilizando el sensor ultrasónico. Con los datos obtenidos se calcularon el promedio, la desviación estándar y el porcentaje de error de precision y exactitud, con el objetivo de comparar las mediciones del sistema con las distancias reales.
 
 Los datos utilizados en esta prueba se encuentran en la hoja:
 
