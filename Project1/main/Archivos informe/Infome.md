@@ -152,4 +152,14 @@ Los promedios obtenidos fueron 10.16, 20.66, 28.16, 37.66 y 45.66 parpadeos para
 
 - Se recomienda utilizar métodos automáticos para contar los parpadeos y así reducir errores humanos en la medición. También se puede mejorar la precisión ajustando los tiempos del programa o utilizando temporizadores más exactos dentro del sistema. 
 
-# 8. Anexos
+# 8. Anexos 
+
+[Enlace a la planilla de pruebas](https://docs.google.com/spreadsheets/d/1DyKpLJWUTkjiDA7z87IJXlJ0ULdZPX75TzI_sI9DBeM/edit?gid=0#gid=0) 
+
+### Imagenes de las pruebas
+<img src="Imagenes/Prueba_Anexo1.jpeg" width="250">
+<img src="Imagenes/Prueba_Anexo2.jpeg" width="250">
+<img src="Imagenes/Prueba_Anexo3.jpeg" width="450">
+<img src="Imagenes/Prueba_Anexo4.jpeg" width="250">
+<img src="Imagenes/Prueba_Anexo5.jpeg" width="450">
+<img src="Imagenes/Prueba_Anexo6.jpeg" width="250">
