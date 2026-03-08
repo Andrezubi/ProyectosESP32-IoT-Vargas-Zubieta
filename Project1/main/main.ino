@@ -1,37 +1,70 @@
-const int trigPin = 8;
-const int echoPin = 10;
 
-long duration;
-int distanceCm;
+#include "LED.h"
+#include "SonarSensor.h"
+SonarSensor sonar(26, 27);
+LED blueLED(16);
+LED greenLED(17);
+LED yellowLED(18);
+LED redLED(19);
+int currentZone=-1;
+int blinksPerSecond = 1;
+void setup()
+{
 
-void setup() {
-  pinMode(trigPin, OUTPUT); // Trigger pin sets the pulse out
-  pinMode(echoPin, INPUT);  // Echo pin reads the pulse duration
   Serial.begin(9600);
+  blueLED.setBlinksPerSecond(blinksPerSecond);
+  greenLED.setBlinksPerSecond(blinksPerSecond);
+  yellowLED.setBlinksPerSecond(blinksPerSecond);
+  redLED.setBlinksPerSecond(blinksPerSecond);
 }
 
-void loop() {
-  // Clear the trigPin, set low for 2 microseconds
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
+void loop()
+{
+  float distance = sonar.getDistanceCm();
 
-  // Set the trigPin on HIGH state for 10 microseconds
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
+  Serial.print("Distancia: ");
+  Serial.println(distance);
 
-  // Read the echoPin, returns the sound wave travel time in microseconds
-  duration = [pulseIn](https://www.arduino.cc)(echoPin, HIGH);
+  int zone;
 
-  // Calculate the distance
-  // Speed of sound is 0.034 cm/uS (or 340 m/s)
-  // Distance = (Duration * Speed of Sound) / 2 (divide by 2 because it's round trip)
-  distanceCm = duration * 0.034 / 2;
+  if(distance == -1) zone = -1;
+  else if(distance < 20) zone = 0;
+  else if(distance < 50) zone = 1;
+  else if(distance < 80) zone = 2;
+  else zone = 3;
 
-  // Print the distance to the Serial Monitor
-  Serial.print("Distance: ");
-  Serial.print(distanceCm);
-  Serial.println(" cm");
-  
+  if(zone != currentZone)
+  {
+    turnOffAllLEDS();
+
+    if(zone == 0)
+      greenLED.setState(LED::BLINK);
+    else if(zone == 1)
+      yellowLED.setState(LED::BLINK);
+    else if(zone == 2)
+      redLED.setState(LED::BLINK);
+    else if(zone == 3)
+      blueLED.setState(LED::BLINK);
+
+    currentZone = zone;
+  }
+
+  updateAllLEDS();
+
   delay(100);
+}
+
+void turnOffAllLEDS()
+{
+  greenLED.setState(LED::OFF);
+  yellowLED.setState(LED::OFF);
+  redLED.setState(LED::OFF);
+  blueLED.setState(LED::OFF);
+}
+void updateAllLEDS()
+{
+  greenLED.update();
+  yellowLED.update();
+  redLED.update();
+  blueLED.update();
 }
