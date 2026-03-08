@@ -53,10 +53,14 @@ Marzo 2026
 # 2. Diseño del Sistema
 
 ## 2.1 Diagrama de circuito
-
+![Diagrama](Imagenes/diagrama_circuito.jpeg)
 ## 2.2 Diagrama de arquitectura del sistema
-![Diagrama_de_arquitectura_del_sistema](Imagenes/Diagrama_de_arquitectura.png)
+![Diagrama](Imagenes/Diagrama_de_arquitectura.png)
 ## 2.3 Diagramas estructurales y de comportamiento
+### 2.3.1 Diagrama de secuencia
+![Diagrama](Imagenes/diagrama_secuencia.jpeg)
+### 2.3.1 Diagramas de uml
+![Diagrama](Imagenes/diagrama_uml.jpeg)
 
 # 3. Implementación
 
