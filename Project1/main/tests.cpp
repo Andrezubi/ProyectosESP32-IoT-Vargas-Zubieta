@@ -4,7 +4,7 @@ SonarSensor sonar(26,27);
 void setup() {
 
     Serial.begin(9600);
-  
+
 }
 
 void loop() {
