@@ -16,3 +16,7 @@ void loop() {
 
     delay(100);
 } */
+
+
+
+//these tests were made just to measure distance without any other aspect
